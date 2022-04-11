@@ -2,7 +2,9 @@
 #include "Session.h"
 #include "Loop.h"
 
+#ifndef CATCH_CONFIG_MAIN
 #define CATCH_CONFIG_MAIN
+#endif
 
 #ifndef CATCH_CONFIG_MAIN
 

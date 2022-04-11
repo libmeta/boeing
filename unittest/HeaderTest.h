@@ -1,4 +1,7 @@
+#ifndef CATCH_CONFIG_MAIN
 #define CATCH_CONFIG_MAIN
+#endif
+
 #include "../catch/catch.hpp"
 #include "../message/Header.h"
 #include <cstdio>
@@ -9,7 +12,7 @@ TEST_CASE( "boeHeader.headerEncode" ) {
 	boeHeader.mid = 3;
         boeHeader.uid = 10; 
 	char *s = (char *)malloc(100 * sizeof(char));
-        memset(s, 100, '\0');
+        memset(s, '\0',100);
 	boeHeader.headerEncode(s);
         int64_t encode_num;
         int8_t *encode_p = (int8_t *)&encode_num;
@@ -28,7 +31,7 @@ TEST_CASE( "boeHeader.headerDecode" ) {
 	boeHeader.mid = 3;
         boeHeader.uid = 10; 
 	char *s = (char *)malloc(100 * sizeof(char));
-        memset(s, 100, '\0');
+        memset(s, '\0',100);
         s[0] = 1;
         s[1] = 5;
         s[2] = 1;
